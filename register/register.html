@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Registrasi pelanggan Dini's Petshop"
+  >
+
+  <title>Registrasi - Dini's Petshop</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="home-navbar sticky-top">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <a href="../index.html" class="home-brand">
+        <span>🐾</span>
+        Dini’s Petshop
+      </a>
+
+      <nav class="home-navigation">
+
+        <a href="../index.html">
+          Beranda
+        </a>
+
+        <a href="../katalog/produk.html">
+          Produk
+        </a>
+
+        <a href="../login/login.html">
+          Login
+        </a>
+
+        <a href="register.html" class="register-button active">
+          Registrasi
+        </a>
+
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Registrasi -->
+  <main class="register-page">
+
+    <div class="register-overlay"></div>
+
+    <div class="container position-relative">
+
+      <div class="row justify-content-center">
+
+        <div class="col-12 col-md-8 col-lg-5">
+
+          <div class="register-card">
+
+            <div class="register-icon">
+              🐾
+            </div>
+
+            <h1>
+              Registrasi Pelanggan
+            </h1>
+
+            <p>
+              Buat akun untuk mulai berbelanja di Dini’s Petshop.
+            </p>
+
+            <div
+              id="registerMessage"
+              class="register-message d-none"
+              role="alert"
+            ></div>
+
+            <form id="registerForm">
+
+              <div class="mb-3">
+
+                <label
+                  for="newName"
+                  class="form-label"
+                >
+                  Nama
+                </label>
+
+                <input
+                  type="text"
+                  class="form-control register-input"
+                  id="newName"
+                  placeholder="Masukkan nama lengkap"
+                  autocomplete="name"
+                  required
+                >
+
+                <div
+                  id="nameError"
+                  class="text-danger small mt-1"
+                ></div>
+
+              </div>
+
+              <div class="mb-3">
+
+                <label
+                  for="newUsername"
+                  class="form-label"
+                >
+                  Username
+                </label>
+
+                <input
+                  type="text"
+                  class="form-control register-input"
+                  id="newUsername"
+                  placeholder="Masukkan username"
+                  autocomplete="username"
+                  required
+                >
+
+                <div
+                  id="usernameError"
+                  class="text-danger small mt-1"
+                ></div>
+
+              </div>
+
+              <div class="mb-3">
+
+                <label
+                  for="newPassword"
+                  class="form-label"
+                >
+                  Password
+                </label>
+
+                <div class="password-wrapper">
+
+                  <input
+                    type="password"
+                    class="form-control register-input"
+                    id="newPassword"
+                    placeholder="Masukkan password"
+                    autocomplete="new-password"
+                    required
+                  >
+
+                  <button
+                    type="button"
+                    id="togglePassword"
+                    class="password-toggle"
+                    aria-label="Tampilkan password"
+                  >
+                    Lihat
+                  </button>
+
+                </div>
+
+                <div
+                  id="passwordError"
+                  class="text-danger small mt-1"
+                ></div>
+
+              </div>
+
+              <div class="mb-4">
+
+                <label
+                  for="newWA"
+                  class="form-label"
+                >
+                  No. WhatsApp
+                </label>
+
+                <div class="input-group">
+
+                  <span class="input-group-text">
+                    +62
+                  </span>
+
+                  <input
+                    type="text"
+                    class="form-control register-input"
+                    id="newWA"
+                    placeholder="81234567890"
+                    inputmode="numeric"
+                    maxlength="13"
+                    required
+                  >
+
+                </div>
+
+                <div
+                  id="waError"
+                  class="text-danger small mt-1"
+                ></div>
+
+              </div>
+
+              <button
+                type="submit"
+                class="register-button"
+              >
+                Daftar
+              </button>
+
+            </form>
+
+            <p class="register-login-text">
+              Sudah mempunyai akun?
+
+              <a href="../login/login.html">
+                Login di sini
+              </a>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Sticky Cart -->
+  <a
+    href="../cart/cart.html"
+    id="stickyCart"
+    aria-label="Buka keranjang belanja"
+  >
+    <span class="sticky-cart-icon">
+      🛒
+    </span>
+
+    <span id="stickyCartCount">
+      0
+    </span>
+  </a>
+
+  <script src="register.js"></script>
+
+</body>
+</html>
